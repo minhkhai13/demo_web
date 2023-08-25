@@ -1,23 +1,26 @@
 const Course = require('../models/course');
+const {muntilCourseMongoose} = require('../../util/mongoose')
 class SiteController {
-
     home(req, res) {
         // res.render("home")
-        getData(req, res);
-        async function getData(req, res) {
-            try {
-                const doc = await Course.find({});
-                res.json(doc);
-            } catch (error) {
-                res.status(400).json({ error: "Error" })
-            }
-        }
+        // Course.find({}).then(document => res.json(document)).catch(error => next(error));
+        Course.find({})
+        .then(document =>{
+            res.render('home',{document:muntilCourseMongoose(document)});
+
+        })
+        .catch(error => next(error));
+
     }
 
     // [GET]: news/search
     search(req, res) {
-        res.render('search')
+        console.log(req.body)
+        res.render('search');
     }
-
+    // [GET]:home
+    // home(req,res){
+    //     res.render('home')
+    // }
 }
-module.exports = new SiteController;
+module.exports = new SiteController();

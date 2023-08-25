@@ -3,7 +3,7 @@ const morgan = require('morgan');
 const path = require('path');
 const handlebars = require('express-handlebars');
 const app = express();
-const port = 21;
+const port = 3000;
 const route = require('./routes/index');
 const db = require('./config/db/index');
 
@@ -23,7 +23,7 @@ app.set('views', './src/resources/views');
 
 route(app);
 
-app.listen(port,'185.27.134.215',()=> {
+app.listen(port,()=> {
     console.log("app local host port")
 });
 

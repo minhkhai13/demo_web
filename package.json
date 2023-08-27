@@ -32,5 +32,8 @@
   "bugs": {
     "url": "https://gitlab.com/minhkhai1301/node_express/issues"
   },
-  "homepage": "https://gitlab.com/minhkhai1301/node_express#readme"
+  "homepage": "https://gitlab.com/minhkhai1301/node_express#readme",
+  "engines": {
+    "node": "16.14.2"
+  }
 }

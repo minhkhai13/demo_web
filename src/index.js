@@ -8,7 +8,7 @@ const route = require('./routes/index');
 const db = require('./config/db/index');
 
 /** Db connect */
-// db.connnect();
+db.connnect();
 //middleware
 app.use(express.urlencoded());
 app.use(express.json());

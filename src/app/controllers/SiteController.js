@@ -9,7 +9,7 @@ class SiteController {
             res.render('home',{document:muntilCourseMongoose(document)});
 
         })
-        .catch(error => next(error));
+        .catch(error => {});
 
     }
 
